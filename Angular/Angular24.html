@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+</head>
+<body>
+	<script src="https://code.angularjs.org/1.6.9/angular-route.js"></script>
+	<script src="https://code.angularjs.org/1.6.9/angular.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="/lib/bootstap.js"></script>
+    <script src="/lib/bootstap.css"></script>
+    <h1> Guru99 Global Event</h1>
+    <div ng-controller="AngularController">
+
+        <form ng-submit="Display()">
+            &nbsp;&nbsp;&nbsp;
+            Enter which topic you would like to learn
+            <input type="text" ng-app="sampleApp" ng-model="Topic"><br>
+
+            <input type="submit" value="Submit"/>
+
+            <ul ng-repeat="topicname in AllTopic">
+                <li>{{topicname}}</li>
+            </ul>
+        </form>
+    </div>
+	 <script>
+
+         var sampleApp = angular.module("sampleApp",[]);
+
+         sampleApp.contoller("AngularController",function($scope){
+             $scope.AllTopic=[];
+             $scope.Display = function(){
+                 $scope.AllTopic.push($scope.Topic);
+             }
+         });
+     </script>
+</body>
+</html>

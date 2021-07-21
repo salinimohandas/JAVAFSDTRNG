@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>AngularJS Sample Application</h2>
+
+<div ng-app="mainApp" ng=controller="studentController">
+<table border="0">
+<tr>
+<td>Enter first name:</td>
+<td><input type="text" ng-model="student.lastName">
+</td>
+</tr>
+
+<tr>
+<td>Enter last name:</td>
+<td><input type="text" ng-model="student.lastName"></td>
+</tr>
+
+<tr>
+<td>Enter fees:</td>
+<td><input type="text" ng-model="student.fees"></td>
+</tr>
+
+<tr>
+<td>Enter subject:</td>
+<td><input type="text" ng-model="subjectName"></td>
+</tr>
+</table>
+<br/>
+
+<table border="0">
+<tr>
+<td> name in upper Case:</td>
+<td>{{student.fullName() | uppercase}}</td>
+</tr>
+<tr>
+<td> name in lower Case:</td>
+<td>{{student.fullName() | lowercase}}</td>
+</tr>
+<tr>
+<td>fees: </td>
+<td>{{student.fees | currency}}
+</td>
+</tr>
+
+<tr>
+<td>Subject:</td>
+<td>
+<ul>
+<li ng-repeat="subject in student.subject | filter:subjectName |orderBy:'marks'">
+{{subject.name+',marks:'+subject.marks}}
+</li>
+</ul>
+</td>
+</tr>
+
+
+</table></div>
+
+<script>
+var mainApp=angular.module("mainApp",[]);
+
+mainApp.controller('studentcontroller',function($scope){
+	$scope.student={
+			firstName:"salini",
+			lastName:"M",
+			fees:500,
+
+			subjects:[
+				{name:'physics',marks:70},
+				{nmae:'chemistry',marks:80},
+				{name:'math',marks:65}
+				],
+				fullName:function(){
+					var studentObject;
+					return studentObject.firstName+" "+studentObject.lastName;
+					}
+					
+			};
+	 });
+	 </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+</head>
+<body>
+
+	<script src="https://code.angularjs.org/1.6.9/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.9/angular-route.js"></script>
+    <script src="/lib/bootstap.js:"></script>
+    
+
+    <form ng-app="DemoApp" ng-Controller="DemoController" name="myForm" novalidate>
+        <p>Topic Name:<br>
+            <input type="text" name="user" ng-model="user" required>
+        
+            <span style="color:red"
+             ng-show="myForm.user.$dirty && myForm.user.$invalid">
+                <span ng-show="myForm.user.$error.required">Username is required</span>
+            </span>
+
+        </p>
+        <p>
+            <input type="submit" ng-disabled="myForm.user.$dirty && myForm.user.$invalid">
+
+        </p>
+    </form>
+    <script>
+        var app=angular.module("DemoApp",[]);
+
+        app.controller("DemoController",function($scope){
+
+            $scope.Display=function(){
+                $scope.user='Angular';
+            }
+        }
+    </script>
+	 
+</body>
+</html>

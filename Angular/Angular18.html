@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+</head>
+<body>
+    <script src="https://code.angularjs.org/1.6.9/angular-route.js"></script>
+    <script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+    <script src="https://code.angularjs.org/1.6.9/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
+    <div ng-app="" ng-init="quantity=1;price=5">
+
+        people: <input type="number" ng-model="quantity">
+
+        Registeration Price: <input type="number" ng-model="price">
+
+        Total:{{quantity*price}}
+        
+    </div>
+
+</body>
+</html>
