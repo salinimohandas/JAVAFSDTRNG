@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>The constructor property</h2>
+<p> The constructor property returns the cons</p>
+
+<p id="demo"></p>
+
+<script>
+
+document.getElementById("demo").innerHTML=
+	"john".constructor+"<br>"+
+	(2.14).constoctor+"<br>"+
+	false.constructor+"<br>"+
+	[1,2,3,4].constructor+"<br>"
+	+{name:'Jhon',age:4}.constuctor+"<br>"+
+	new Date().constructor+"<br>"+
+	function() {}.constructor;</script>
+</body>
+</html>

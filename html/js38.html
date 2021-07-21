@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>Object Constructors</h2>
+
+<p id="demo"></p>
+
+<script>
+
+function Person(first,last,age,eye){
+	this.firstName=first;
+	this.lastName=last;
+	this.age=age;
+	this.eyeColor=eye;
+
+	
+}
+
+//Create a person object
+
+const myFather=new Person("john","Doe",50,"blue");
+
+//Display age
+
+document.getElementById("demo").innerHTML=
+	"My Father is "+myFather.age+".";
+</script>
+</body>
+</html>
