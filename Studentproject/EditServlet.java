@@ -1,4 +1,4 @@
-package com.ust.exaample;
+package com.ust.trng;
 
 import java.io.IOException;
 import java.io.PrintWriter;
