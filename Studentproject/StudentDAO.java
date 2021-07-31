@@ -13,8 +13,8 @@ public class StudentDAO {
 		Connection con=null;
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			//con=DriverManager.getConnection("jdbc:mysql://localhost:3306/Sample\",\"root\",\"root");
-			 con=DriverManager.getConnection("jdbc:mysql://localhost:3306/Sample","root","root");
+			
+			 con=DriverManager.getConnection("jdbc:mysql://localhost:3306/sample","root","root");
 			}catch(Exception e) {
 				System.out.println(e);
 			}
